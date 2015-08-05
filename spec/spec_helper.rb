@@ -10,6 +10,7 @@ SimpleCov.start do
 end
 
 require 'thanos'
+require 'webmock'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -35,4 +36,20 @@ RSpec.configure do |config|
 
   # config.profile_examples = 10
   # Kernel.srand config.seed
+end
+
+RSpec.configure do
+  include WebMock::API
+
+  def stub_get(path)
+    stub_request(:get, path)
+  end
+
+  def fixture(file)
+    File.new(fixture_path + '/' + file)
+  end
+
+  def fixture_path
+    File.expand_path('../fixtures', __FILE__)
+  end
 end
