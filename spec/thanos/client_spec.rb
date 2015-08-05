@@ -7,4 +7,8 @@ RSpec.describe Thanos::Client do
 
     @client = Thanos::Client.new
   end
+
+  it 'has a character finder' do
+    expect(@client.characters.class).to eq(Thanos::CharacterFinder)
+  end
 end

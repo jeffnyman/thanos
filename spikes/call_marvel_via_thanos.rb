@@ -16,3 +16,5 @@ Thanos.authenticate do |key|
 end
 
 client = Thanos::Client.new
+
+client.characters.find_by_name 'Hulk'
