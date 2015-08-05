@@ -7,8 +7,8 @@ module Thanos
     define_method('find_by_name') do |value|
       options = { name: value }
       response = Thanos::API::Client.new.get(:characters, options)
-      Thanos::ResponseHolder.new(response)
-      Thanos::Factory::Character.new.build
+      results = Thanos::ResponseHolder.new(response).results
+      Thanos::Factory::Character.new(results).build
     end
   end
 end

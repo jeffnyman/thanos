@@ -1,4 +1,5 @@
 require 'rest_client'
+require 'thanos/api/response'
 require 'thanos/api/authentication'
 
 module Thanos
@@ -9,7 +10,8 @@ module Thanos
 
       def get(resource, options)
         url = "#{endpoint}/#{resource}"
-        RestClient.get(url, params: options.merge(authentication))
+        response = RestClient.get(url, params: options.merge(authentication))
+        Thanos::API::Response.new(response)
       end
 
       def endpoint

@@ -1,7 +1,11 @@
 module Thanos
   class ResponseHolder
+    attr_reader :results
+
     def initialize(response)
-      @response = response
+      data = response.data
+
+      @results = data['results']
     end
   end
 end
