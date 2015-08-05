@@ -1,0 +1,14 @@
+/.idea/
+/.bundle/
+/.yardoc
+/Gemfile.lock
+/_yardoc/
+/coverage/
+/doc/
+/rdoc/
+/pkg/
+/spikes/api_keys.yml
+/spec/examples.txt
+/spec/reports/
+/tmp/
+.DS_Store
