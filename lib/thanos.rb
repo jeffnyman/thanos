@@ -1,5 +1,6 @@
 require 'thanos/version'
 require 'thanos/authentication'
+require 'thanos/client'
 
 module Thanos
   class << self

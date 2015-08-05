@@ -14,3 +14,5 @@ Thanos.authenticate do |key|
   key.public_api_key = public_key
   key.private_api_key = private_key
 end
+
+client = Thanos::Client.new
