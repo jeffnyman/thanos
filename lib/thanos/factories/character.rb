@@ -1,4 +1,5 @@
 require 'thanos/resources/character'
+require 'thanos/mappers/character_data_mapper'
 
 module Thanos
   module Factory
@@ -8,7 +9,8 @@ module Thanos
       end
 
       def build
-        Thanos::Character.new
+        attributes = Thanos::CharacterDataMapper.new(@results).map
+        Thanos::Character.new(attributes: attributes)
       end
     end
   end

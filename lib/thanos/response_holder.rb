@@ -4,8 +4,7 @@ module Thanos
 
     def initialize(response)
       data = response.data
-
-      @results = data['results']
+      @results = data['results'].first
     end
   end
 end
