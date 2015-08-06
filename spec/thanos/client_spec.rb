@@ -11,4 +11,8 @@ RSpec.describe Thanos::Client do
   it 'has a character finder' do
     expect(@client.characters.class).to eq(Thanos::CharacterFinder)
   end
+
+  it 'has a series finder' do
+    expect(@client.series.class).to eq(Thanos::SeriesFinder)
+  end
 end

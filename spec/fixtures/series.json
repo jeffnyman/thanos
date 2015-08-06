@@ -1,0 +1,102 @@
+{
+  "code": 200,
+  "status": "Ok",
+  "copyright": "© 2014 MARVEL",
+  "attributionText": "Data provided by Marvel. © 2014 MARVEL",
+  "attributionHTML": "<a href=\"http://marvel.com\">Data provided by Marvel. © 2014 MARVEL</a>",
+  "etag": "35cdca2e00cecb0c9f613382c0d92155d6c971d3",
+  "data": {
+    "offset": 0,
+    "limit": 20,
+    "total": 1,
+    "count": 1,
+    "results": [
+      {
+        "id": 2002,
+        "title": "Daredevil (1963 - 1998)",
+        "description": "Join the Man Without Fear as he stands up for justice! Blind lawyer Matt Murdock protects the streets of Hell's Kitchen by night against dangerous foes like Bullseye and the Kingpin! Includes the classic stories by icon Frank Miller that changed comics forever.",
+        "resourceURI": "http://gateway.marvel.com/v1/public/series/2002",
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/series/2002/daredevil_1963_-_1998?utm_campaign=apiRef&utm_source=f302f582215c3deedff86e8015f853c7"
+          }
+        ],
+        "startYear": 1963,
+        "endYear": 1998,
+        "rating": "",
+        "type": "ongoing",
+        "modified": "2014-03-19T14:31:12-0400",
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/1/00/5130f628766d9",
+          "extension": "jpg"
+        },
+        "creators": {
+          "available": 279,
+          "collectionURI": "http://gateway.marvel.com/v1/public/series/2002/creators",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/87",
+              "name": "Mark Bagley",
+              "role": "penciller (cover)"
+            }
+          ],
+          "returned": 20
+        },
+        "characters": {
+          "available": 57,
+          "collectionURI": "http://gateway.marvel.com/v1/public/series/2002/characters",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009175",
+              "name": "Beast"
+            }
+          ],
+          "returned": 20
+        },
+        "stories": {
+          "available": 819,
+          "collectionURI": "http://gateway.marvel.com/v1/public/series/2002/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/15722",
+              "name": "Life Be Not Proud!",
+              "type": "interiorStory"
+            }
+          ],
+          "returned": 20
+        },
+        "comics": {
+          "available": 381,
+          "collectionURI": "http://gateway.marvel.com/v1/public/series/2002/comics",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/8072",
+              "name": "Daredevil (1963)"
+            }
+          ],
+          "returned": 20
+        },
+        "events": {
+          "available": 6,
+          "collectionURI": "http://gateway.marvel.com/v1/public/series/2002/events",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/116",
+              "name": "Acts of Vengeance!"
+            }
+          ],
+          "returned": 6
+        },
+        "next": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/449",
+          "name": "Daredevil (1998 - 2011)"
+        },
+        "previous": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/449",
+          "name": "Daredevil (1998 - 2011)"
+        }
+      }
+    ]
+  }
+}

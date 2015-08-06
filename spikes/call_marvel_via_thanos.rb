@@ -24,3 +24,5 @@ puts hulk.description
 puts hulk.resource_uri
 puts hulk.urls.first.url
 puts hulk.thumbnail.full_path
+
+avengers = client.series.find_by_name 'The Avengers'
