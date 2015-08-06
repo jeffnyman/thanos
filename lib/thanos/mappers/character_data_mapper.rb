@@ -6,7 +6,10 @@ module Thanos
 
     def map
       {
+        id: @results['id'],
         name: @results['name'],
+        description: @results['description'],
+        resource_uri: @results['resourceURI'],
       }
     end
   end

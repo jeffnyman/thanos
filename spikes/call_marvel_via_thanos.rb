@@ -18,4 +18,7 @@ end
 client = Thanos::Client.new
 
 hulk = client.characters.find_by_name 'Hulk'
+puts hulk.id
 puts hulk.name
+puts hulk.description
+puts hulk.resource_uri
