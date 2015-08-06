@@ -22,3 +22,5 @@ puts hulk.id
 puts hulk.name
 puts hulk.description
 puts hulk.resource_uri
+puts hulk.urls.first.url
+puts hulk.thumbnail.full_path

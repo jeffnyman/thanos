@@ -23,8 +23,20 @@ RSpec.describe Thanos::Character do
     end
 
     it '#resourceURI - The canonical URL identifier for this resource' do
-      allow(Time).to receive_message_chain(:now, :to_i, :to_s).and_return '1'
       expect(character.resource_uri).to eq 'http://gateway.marvel.com/v1/public/characters/1009220'
+    end
+
+    it '#urls - A set of public web site URLs for the resource' do
+      expect(character.urls.class).to eq(Array)
+      expect(character.urls.first.type).to eq('detail')
+      expect(character.urls.first.url).to eq('http://marvel.com/comics/characters/1009220/captain_america?utm_campaign=apiRef&utm_source=f302f582215c3deedff86e8015f853c7')
+    end
+
+    it '#thumbnail - The representative image for this character' do
+      expect(character.thumbnail.class).to eq(Thanos::Thumbnail)
+      expect(character.thumbnail.path).to eq('http://i.annihil.us/u/prod/marvel/i/mg/2/c0/5261a81d0154e')
+      expect(character.thumbnail.extension).to eq('jpg')
+      expect(character.thumbnail.full_path).to eq('http://i.annihil.us/u/prod/marvel/i/mg/2/c0/5261a81d0154e.jpg')
     end
   end
 end
