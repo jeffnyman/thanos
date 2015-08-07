@@ -15,4 +15,12 @@ RSpec.describe Thanos::Client do
   it 'has a series finder' do
     expect(@client.series.class).to eq(Thanos::SeriesFinder)
   end
+
+  it 'has a event finder' do
+    expect(@client.events.class).to eq(Thanos::EventFinder)
+  end
+
+  it 'has a comic finder' do
+    expect(@client.comics.class).to eq(Thanos::ComicFinder)
+  end
 end
