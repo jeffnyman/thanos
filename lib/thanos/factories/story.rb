@@ -1,3 +1,4 @@
+require 'thanos/mappers/story_data_mapper'
 require 'thanos/resources/story'
 
 module Thanos
@@ -8,7 +9,8 @@ module Thanos
       end
 
       def build
-        Thanos::Story.new
+        attributes = Thanos::StoryDataMapper.new(@results).map
+        Thanos::Story.new(attributes: attributes)
       end
     end
   end
