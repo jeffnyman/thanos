@@ -16,7 +16,7 @@ RSpec.describe Thanos::SeriesFinder do
   end
 
 
-  it 'builds a character out of the received response' do
+  it 'builds a series out of the received response' do
     expect(finder.find_by_name('The Avengers')).to be_kind_of(Thanos::Series)
   end
 end
