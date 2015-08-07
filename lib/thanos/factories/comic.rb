@@ -1,3 +1,4 @@
+require 'thanos/mappers/comic_data_mapper'
 require 'thanos/resources/comic'
 
 module Thanos
@@ -8,7 +9,8 @@ module Thanos
       end
 
       def build
-        Thanos::Comic.new
+        attributes = Thanos::ComicDataMapper.new(@results).map
+        Thanos::Comic.new(attributes: attributes)
       end
     end
   end
