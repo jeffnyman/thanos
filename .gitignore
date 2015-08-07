@@ -8,6 +8,7 @@
 /rdoc/
 /pkg/
 /spikes/api_keys.yml
+/spikes/test_thanos.rb
 /spec/examples.txt
 /spec/reports/
 /tmp/
