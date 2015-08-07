@@ -19,5 +19,13 @@ module Thanos
       return unless @results['thumbnail']
       Thanos::Factory::Thumbnail.new(@results['thumbnail']).build
     end
+
+    def start_date
+      DateTime.parse(@results['start'])
+    end
+
+    def end_date
+      DateTime.parse(@results['end'])
+    end
   end
 end

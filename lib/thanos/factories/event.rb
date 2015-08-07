@@ -1,3 +1,4 @@
+require 'thanos/mappers/event_data_mapper'
 require 'thanos/resources/event'
 
 module Thanos
@@ -8,7 +9,8 @@ module Thanos
       end
 
       def build
-        Thanos::Event.new
+        attributes = Thanos::EventDataMapper.new(@results).map
+        Thanos::Event.new(attributes: attributes)
       end
     end
   end
