@@ -30,11 +30,67 @@ You can, of course, just install the gem directly like this:
 
     $ gem install thanos
 
-
 ## Usage
 
-Usage instructions will be coming just as soon as there is an implementation.
+### Setting Up the Client
 
+You need API credentials, which is a public and private key pair. You can get yours at the [Marvel Developer Portal](http://developer.marvel.com). These are required to configure and instantiate a Thanos client.
+
+```ruby
+require 'thanos'
+
+Thanos.authenticate do |key|
+  key.public_api_key = 'your public key'
+  key.private_api_key = 'your private key'
+end
+
+client = Thanos::Client.new
+```
+
+Make sure you put in your own public and private keys that you were assigned. The `client` variable will now hold a `Thanos::Client` instance that you can call endpoint methods on.
+
+## API Access
+
+Thanos is a wrapper around the API resources and is designed to provide a simple interface that allows you to communicate with the API without having to know the structure of the information returned by the API.
+
+Here is a full example of getting information about a character, assuming you have a `client` instance as shown above:
+
+```ruby
+hulk = client.characters.find_by_name 'Hulk'
+
+puts hulk.id
+puts hulk.name
+puts hulk.description
+puts hulk.resource_uri
+puts hulk.thumbnail.path
+puts hulk.thumbnail.extension
+puts hulk.thumbnail.full_path
+
+puts hulk.urls.first.url
+puts hulk.urls.first.type
+
+hulk.urls.each do |link|
+  puts "Url: #{link.url}"
+end
+
+hulk.comics.each do |comic|
+  puts "Comic: #{comic.name}"
+end
+
+hulk.stories.each do |story|
+  puts "Story: #{story.name}"
+end
+
+hulk.events.each do |event|
+  puts "Event: #{event.name}"
+end
+
+hulk.series.each do |series|
+  puts "Series: #{series.name}"
+end
+```
+
+This shows you that you can call various attributes of the resource -- in this case a `character` -- and display information about the resource (such as `name` and `description`) as well as information related to the resource, such as a list of `events` or `series` that the character was involved in.
 
 ## Contributing
 
