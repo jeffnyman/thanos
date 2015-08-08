@@ -8,4 +8,8 @@ RSpec.describe Thanos::CharacterDataMapper do
     expect(mapped_attributes).to be_kind_of(Hash)
     expect(mapped_attributes[:name]).to eq('Captain America')
   end
+
+  it 'rejects invalid json attributes' do
+    expect(mapped_attributes[:some_invalid_attribute]).to be_nil
+  end
 end

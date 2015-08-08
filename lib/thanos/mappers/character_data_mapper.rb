@@ -16,6 +16,10 @@ module Thanos
         resource_uri: @results['resourceURI'],
         urls: urls,
         thumbnail: thumbnail,
+        comics: comics,
+        stories: stories,
+        events: events,
+        series: series,
       }
     end
   end

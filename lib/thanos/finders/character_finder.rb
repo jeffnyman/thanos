@@ -4,9 +4,18 @@ require 'thanos/factories/character'
 
 module Thanos
   class CharacterFinder
-    define_method('find_by_name') do |value|
-      options = { name: value }
-      response = Thanos::API::Client.new.get(:characters, options)
+    ATTRIBUTES = [:name]
+
+    ATTRIBUTES.each do |attribute|
+      define_method("find_by_#{attribute}") do |attr|
+        find("#{attribute}".to_sym => attr)
+      end
+    end
+
+    private
+
+    def find(attribute)
+      response = Thanos::API::Client.new.get(:characters, attribute)
       results = Thanos::ResponseHolder.new(response).results
       Thanos::Factory::Character.new(results).build
     end

@@ -38,5 +38,36 @@ RSpec.describe Thanos::Character do
       expect(character.thumbnail.extension).to eq('jpg')
       expect(character.thumbnail.full_path).to eq('http://i.annihil.us/u/prod/marvel/i/mg/2/c0/5261a81d0154e.jpg')
     end
+
+    context 'item objects' do
+      it '#comics - A resource list containing comics which feature this character' do
+        expect(character.comics.class).to eq(Array)
+        expect(character.comics.first.class).to eq(Thanos::Item::Comic)
+        expect(character.comics.first.name).to eq('Age of Apocalypse (2011) #2 (Avengers Art Appreciation Variant)')
+        expect(character.comics.first.resource_uri).to eq('http://gateway.marvel.com/v1/public/comics/42539')
+      end
+
+      it '#stories - A resource list of stories in which this character appears' do
+        expect(character.stories.class).to eq(Array)
+        expect(character.stories.first.class).to eq(Thanos::Item::Story)
+        expect(character.stories.first.name).to eq('Cover #892')
+        expect(character.stories.first.resource_uri).to eq('http://gateway.marvel.com/v1/public/stories/892')
+        expect(character.stories.first.type).to eq('cover')
+      end
+
+      it '#events - A resource list of events in which this character appears' do
+        expect(character.events.class).to eq(Array)
+        expect(character.events.first.class).to eq(Thanos::Item::Event)
+        expect(character.events.first.name).to eq('Acts of Vengeance!')
+        expect(character.events.first.resource_uri).to eq('http://gateway.marvel.com/v1/public/events/116')
+      end
+
+      #it '#series - A resource list of series in which this character appears' do
+      #  expect(character.series.class).to eq(Array)
+      #  expect(character.series.first.class).to eq(Thanos::Summary::Series)
+      #  expect(character.series.first.name).to eq('Age of Apocalypse (2011 - Present)')
+      #  expect(character.series.first.resource_uri).to eq('http://gateway.marvel.com/v1/public/series/15331')
+      #end
+    end
   end
 end
