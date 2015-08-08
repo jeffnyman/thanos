@@ -5,6 +5,7 @@ require 'thanos/factories/item/comic'
 require 'thanos/factories/item/story'
 require 'thanos/factories/item/event'
 require 'thanos/factories/item/series'
+require 'thanos/factories/item/character'
 
 module Thanos
   module Mappable

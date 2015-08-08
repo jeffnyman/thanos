@@ -15,6 +15,13 @@ RSpec.describe Thanos::CharacterFinder do
     end
   end
 
+  Thanos::CharacterFinder::ATTRIBUTES.each do |attribute|
+    parameter = Thanos::StringActions.parameterize(attribute.to_s)
+    it "should respond to #{parameter}" do
+      expect(finder).to respond_to("find_by_#{parameter}".to_sym)
+    end
+  end
+
   it 'builds a character out of the received response' do
     expect(finder.find_by_name('Hulk')).to be_kind_of(Thanos::Character)
   end
