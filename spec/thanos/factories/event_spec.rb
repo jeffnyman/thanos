@@ -5,6 +5,6 @@ RSpec.describe Thanos::Factory::Event do
   let(:factory) { described_class.new(results) }
 
   it 'builds an event out of api results' do
-    expect(factory.build).to be_kind_of Thanos::Event
+    expect(factory.build).to be_kind_of(Thanos::Event)
   end
 end
