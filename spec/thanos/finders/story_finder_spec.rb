@@ -2,7 +2,7 @@ RSpec.describe Thanos::StoryFinder do
   let(:finder) { described_class.new }
 
   before :each do
-    request = 'http://gateway.marvel.com/v1/public/stories?apikey=abc123&name=1,%202,%203&hash=53b9dadbec687f8d57cf42cdb27386ea&ts=1'
+    request = 'http://gateway.marvel.com/v1/public/stories?apikey=abc123&comics=1,%202,%203&hash=53b9dadbec687f8d57cf42cdb27386ea&ts=1'
 
     stub_get(request).to_return(
         :body => fixture('story.json'),
@@ -16,6 +16,12 @@ RSpec.describe Thanos::StoryFinder do
     end
   end
 
+  Thanos::StoryFinder::ATTRIBUTES.each do |attribute|
+    parameter = Thanos::StringActions.parameterize(attribute.to_s)
+    it "should respond to #{parameter}" do
+      expect(finder).to respond_to("find_by_#{parameter}".to_sym)
+    end
+  end
 
   it 'builds a story out of the received response' do
     expect(finder.find_by_comics('1, 2, 3')).to be_kind_of(Thanos::Story)

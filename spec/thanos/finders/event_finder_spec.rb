@@ -15,6 +15,12 @@ RSpec.describe Thanos::EventFinder do
     end
   end
 
+  Thanos::EventFinder::ATTRIBUTES.each do |attribute|
+    parameter = Thanos::StringActions.parameterize(attribute.to_s)
+    it "should respond to #{parameter}" do
+      expect(finder).to respond_to("find_by_#{parameter}".to_sym)
+    end
+  end
 
   it 'builds an event out of the received response' do
     expect(finder.find_by_name('Fall of the Mutants')).to be_kind_of(Thanos::Event)

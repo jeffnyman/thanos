@@ -4,9 +4,19 @@ require 'thanos/factories/series'
 
 module Thanos
   class SeriesFinder
-    define_method('find_by_name') do |value|
-      options = { name: value }
-      response = Thanos::API::Client.new.get(:series, options)
+    ATTRIBUTES = [:name, :modifiedSince, :creators, :characters, :series,
+                  :comics, :stories, :orderBy, :limit, :offset]
+
+    ATTRIBUTES.each do |attribute|
+      parameter = StringActions.parameterize(attribute.to_s)
+      define_method("find_by_#{parameter}") do |attr|
+        find("#{attribute}".to_sym => attr)
+      end
+    end
+
+    def find(attribute)
+      FinderValidator.validate(attribute, ATTRIBUTES)
+      response = Thanos::API::Client.new.get(:series, attribute)
       results = Thanos::ResponseHolder.new(response).results
       Thanos::Factory::Series.new(results).build
     end

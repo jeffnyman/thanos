@@ -6,7 +6,11 @@ require 'thanos/finders/finder_validator'
 
 module Thanos
   class CreatorFinder
-    ATTRIBUTES = [:firstName]
+    ATTRIBUTES = [:firstName, :middleName, :lastName, :suffix,
+                  :nameStartsWith, :firstNameStartsWith,
+                  :middleNameStartsWith, :lastNameStartsWith,
+                  :modifiedSince, :comics, :series, :events,
+                  :stories]
 
     ATTRIBUTES.each do |attribute|
       parameter = StringActions.parameterize(attribute.to_s)

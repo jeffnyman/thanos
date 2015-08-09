@@ -4,9 +4,19 @@ require 'thanos/factories/story'
 
 module Thanos
   class StoryFinder
-    define_method('find_by_comics') do |value|
-      options = { name: value }
-      response = Thanos::API::Client.new.get(:stories, options)
+    ATTRIBUTES = [:modifiedSince, :comics, :series, :events, :creators,
+                  :characters]
+
+    ATTRIBUTES.each do |attribute|
+      parameter = StringActions.parameterize(attribute.to_s)
+      define_method("find_by_#{parameter}") do |attr|
+        find("#{attribute}".to_sym => attr)
+      end
+    end
+
+    def find(attribute)
+      FinderValidator.validate(attribute, ATTRIBUTES)
+      response = Thanos::API::Client.new.get(:stories, attribute)
       results = Thanos::ResponseHolder.new(response).results
       Thanos::Factory::Story.new(results).build
     end

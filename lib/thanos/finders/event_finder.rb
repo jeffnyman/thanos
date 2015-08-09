@@ -4,9 +4,21 @@ require 'thanos/factories/event'
 
 module Thanos
   class EventFinder
-    define_method('find_by_name') do |value|
-      options = { name: value }
-      response = Thanos::API::Client.new.get(:events, options)
+    ATTRIBUTES = [:name, :nameStartsWith, :modifiedSince, :creators, :series,
+                  :comics, :stories, :characters, :orderBy, :limit, :offset]
+
+    ATTRIBUTES.each do |attribute|
+      parameter = StringActions.parameterize(attribute.to_s)
+      define_method("find_by_#{parameter}") do |attr|
+        find("#{attribute}".to_sym => attr)
+      end
+    end
+
+    private
+
+    def find(attribute)
+      FinderValidator.validate(attribute, ATTRIBUTES)
+      response = Thanos::API::Client.new.get(:events, attribute)
       results = Thanos::ResponseHolder.new(response).results
       Thanos::Factory::Event.new(results).build
     end
