@@ -1,12 +1,13 @@
 module Thanos
   module Item
     class Event
-      attr_reader :name, :resource_uri, :type
+      attr_reader :id, :name, :resource_uri, :type
 
       def initialize(data)
+        @id = data['id']
         @name = data['name']
         @resource_uri = data['resourceURI']
-        @type = data['type']
+        @type = data['type'] || nil
       end
     end
   end

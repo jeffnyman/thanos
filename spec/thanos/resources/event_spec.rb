@@ -51,4 +51,41 @@ RSpec.describe Thanos::Event do
     expect(event.thumbnail.extension).to eq('jpg')
     expect(event.thumbnail.full_path).to eq('http://i.annihil.us/u/prod/marvel/i/mg/8/a0/51cb2f521ae35.jpg')
   end
+
+  it '#comics - A resource list containing the comics in this event' do
+    expect(event.comics.class).to eq(Array)
+    expect(event.comics.first.class).to eq(Thanos::Item::Comic)
+    expect(event.comics.first.name).to eq('Captain America (1968) #339')
+    expect(event.comics.first.resource_uri).to eq('http://gateway.marvel.com/v1/public/comics/7720')
+  end
+
+  it '#stories - A resource list containing the stories in this event' do
+    expect(event.stories.class).to eq(Array)
+    expect(event.stories.first.class).to eq(Thanos::Item::Story)
+    expect(event.stories.first.name).to eq('Fall of the Mutants')
+    expect(event.stories.first.resource_uri).to eq('http://gateway.marvel.com/v1/public/stories/22222')
+    expect(event.stories.first.type).to eq('cover')
+  end
+
+  it '#series - A resource list containing the series in this event' do
+    expect(event.series.class).to eq(Array)
+    expect(event.series.first.class).to eq(Thanos::Item::Series)
+    expect(event.series.first.name).to eq('Daredevil (1963 - 1998)')
+    expect(event.series.first.resource_uri).to eq('http://gateway.marvel.com/v1/public/series/2002')
+  end
+
+  it '#characters - A resource list containing the characters which appear in this event' do
+    expect(event.characters.class).to eq(Array)
+    expect(event.characters.first.class).to eq(Thanos::Item::Character)
+    expect(event.characters.first.name).to eq('Havok')
+    expect(event.characters.first.resource_uri).to eq('http://gateway.marvel.com/v1/public/characters/1009337')
+  end
+
+  it '#creators - A resource list containing creators whose work appears in this event' do
+    expect(event.creators.class).to eq(Array)
+    expect(event.creators.first.class).to eq(Thanos::Item::Creator)
+    expect(event.creators.first.name).to eq('Mark Gruenwald')
+    expect(event.creators.first.role).to eq('writer')
+    expect(event.creators.first.resource_uri).to eq('http://gateway.marvel.com/v1/public/creators/259')
+  end
 end

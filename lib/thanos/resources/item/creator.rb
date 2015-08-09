@@ -1,7 +1,12 @@
 module Thanos
   module Item
     class Creator
-      def initialize(_data)
+      attr_reader :name, :resource_uri, :role
+
+      def initialize(data)
+        @name = data['name']
+        @resource_uri = data['resourceURI']
+        @role = data['role']
       end
     end
   end

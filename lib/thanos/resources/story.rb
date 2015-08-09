@@ -1,6 +1,7 @@
 module Thanos
   class Story
-    attr_reader :title, :description, :type
+    attr_reader :title, :description, :type, :resource_uri, :thumbnail,
+      :creators, :characters, :events, :series, :comics
 
     def initialize(args)
       args[:attributes].each do |attribute, value|
