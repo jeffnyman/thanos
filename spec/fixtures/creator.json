@@ -1,0 +1,344 @@
+{
+  "code": 200,
+  "status": "Ok",
+  "copyright": "© 2014 MARVEL",
+  "attributionText": "Data provided by Marvel. © 2014 MARVEL",
+  "attributionHTML": "<a href=\"http://marvel.com\">Data provided by Marvel. © 2014 MARVEL</a>",
+  "etag": "4bfe7fb0a1f87dc1d8a92c7620be4cafb26fb1e2",
+  "data": {
+    "offset": 0,
+    "limit": 20,
+    "total": 1,
+    "count": 1,
+    "results": [
+      {
+        "id": 648,
+        "firstName": "Simone",
+        "middleName": "",
+        "lastName": "Bianchi",
+        "suffix": "",
+        "fullName": "Simone Bianchi",
+        "modified": "2013-09-10T10:10:14-0400",
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/30/4bc5a8bb82ff1",
+          "extension": "jpg"
+        },
+        "resourceURI": "http://gateway.marvel.com/v1/public/creators/648",
+        "comics": {
+          "available": 148,
+          "collectionURI": "http://gateway.marvel.com/v1/public/creators/648/comics",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/38524",
+              "name": "Age of X: Universe (2011) #1"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/38523",
+              "name": "Age of X: Universe (2011) #2"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/20961",
+              "name": "Amazing Spider-Man (1999) #555 (VARIANT)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/28227",
+              "name": "Amazing Spider-Man (1999) #622"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/38462",
+              "name": "Astonishing Spider-Man & Wolverine: Another Fine Mess (2011) #1"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/21511",
+              "name": "Astonishing X-Men (2004) #25"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/21714",
+              "name": "Astonishing X-Men (2004) #26"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/21941",
+              "name": "Astonishing X-Men (2004) #27"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/23087",
+              "name": "Astonishing X-Men (2004) #28"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/23937",
+              "name": "Astonishing X-Men (2004) #29"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/24501",
+              "name": "Astonishing X-Men (2004) #30"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/24518",
+              "name": "Astonishing X-Men: Ghost Box (Trade Paperback)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/22381",
+              "name": "Astonishing X-Men: Ghost Boxes (2008) #1"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/22572",
+              "name": "Astonishing X-Men: Ghost Boxes (2008) #2"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/46932",
+              "name": "Avengers (2012) #24 (Bianchi Variant)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/49555",
+              "name": "Avengers (2012) #24 (Bianchi Sketch Variant)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/50002",
+              "name": "Avengers World (2014) #2 (Bianchi Variant)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/30372",
+              "name": "Black Panther: The Man Without Fear (2010) #513"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/38932",
+              "name": "Black Panther: The Man Without Fear (2010) #513 (2nd Printing Variant)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/30373",
+              "name": "Black Panther: The Man Without Fear (2010) #514"
+            }
+          ],
+          "returned": 20
+        },
+        "series": {
+          "available": 66,
+          "collectionURI": "http://gateway.marvel.com/v1/public/creators/648/series",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/13896",
+              "name": "Age of X: Universe (2011)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/454",
+              "name": "Amazing Spider-Man (1999 - 2013)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/13864",
+              "name": "Astonishing Spider-Man & Wolverine: Another Fine Mess (2011)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/744",
+              "name": "Astonishing X-Men (2004 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/8916",
+              "name": "Astonishing X-Men: Ghost Box (2009)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/5998",
+              "name": "Astonishing X-Men: Ghost Boxes (2008)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/16452",
+              "name": "Avengers (2012 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/18398",
+              "name": "Avengers World (2014 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/15691",
+              "name": "Black Panther: The Man Without Fear (2010 - 2011)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/13165",
+              "name": "Black Panther: The Man Without Fear - Fear Itself TPB (2010 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/16907",
+              "name": "Cable and X-Force (2012 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/16516",
+              "name": "Captain America (2012 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/6599",
+              "name": "Dark Avengers (2009 - 2010)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/8798",
+              "name": "Dark Avengers/Uncanny X-Men: Exodus (2009)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/8799",
+              "name": "Dark Avengers/Uncanny X-Men: Utopia (2009)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/7687",
+              "name": "Dark Reign: Fantastic Four (2009 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/7000",
+              "name": "Dark Reign: Fantastic Four (2009)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/7707",
+              "name": "Dark Wolverine (2009 - 2010)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/9051",
+              "name": "Dark X-Men (2009)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/9425",
+              "name": "Dark X-Men (2010)"
+            }
+          ],
+          "returned": 20
+        },
+        "stories": {
+          "available": 234,
+          "collectionURI": "http://gateway.marvel.com/v1/public/creators/648/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/2243",
+              "name": "1 of 6 - Evolution",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/2244",
+              "name": "1 of 6 - Evolution",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/7641",
+              "name": "2 of 6 - Evolution",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/7642",
+              "name": "2 of 6 - Evolution",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/7643",
+              "name": "3 of 6 - Evolution",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/7644",
+              "name": "3 of 6 - Evolution",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/8111",
+              "name": "3 of 6 - Evolution",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/8112",
+              "name": "3 of 6 - Evolution",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/8113",
+              "name": "4 of 6 - Evolution",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/8114",
+              "name": "4 of 6 - Evolution",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/8115",
+              "name": "4 of 6 - Evolution",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/8116",
+              "name": "4 of 6 - Evolution",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/8586",
+              "name": "5 of 6 - Evolution / No Cover or Interior Ads! UPC on Cv4!",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/8587",
+              "name": "5 of 6 - Evolution / No Cover or Interior Ads! UPC on Cv4!",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/8588",
+              "name": "5 of 6 - Evolution",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/8589",
+              "name": "5 of 6 - Evolution",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/32309",
+              "name": "THE INITIATIVE BANNER",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/32526",
+              "name": "6 of 6 - Evolution / No Cover or Interior Ads! UPC on Cv4!",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/32527",
+              "name": "6 of 6 - Evolution / No Cover or Interior Ads! UPC on Cv4!",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/32528",
+              "name": "6 of 6 - Evolution",
+              "type": "cover"
+            }
+          ],
+          "returned": 20
+        },
+        "events": {
+          "available": 5,
+          "collectionURI": "http://gateway.marvel.com/v1/public/creators/648/events",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/303",
+              "name": "Age of X"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/318",
+              "name": "Dark Reign"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/302",
+              "name": "Fear Itself"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/317",
+              "name": "Inhumanity"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/255",
+              "name": "Initiative"
+            }
+          ],
+          "returned": 1
+        },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/creators/648/simone_bianchi?utm_campaign=apiRef&utm_source=f302f582215c3deedff86e8015f853c7"
+          }
+        ]
+      }
+    ]
+  }
+}

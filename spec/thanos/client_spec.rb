@@ -27,4 +27,8 @@ RSpec.describe Thanos::Client do
   it 'has a story finder' do
     expect(@client.stories.class).to eq(Thanos::StoryFinder)
   end
+
+  it 'has a creator finder' do
+    expect(@client.creators.class).to eq(Thanos::CreatorFinder)
+  end
 end
