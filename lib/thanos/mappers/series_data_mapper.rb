@@ -20,6 +20,11 @@ module Thanos
         type: @results['type'],
         urls: urls,
         thumbnail: thumbnail,
+        comics: comics,
+        stories: stories,
+        events: events,
+        creators: creators,
+        characters: characters,
       }
     end
   end

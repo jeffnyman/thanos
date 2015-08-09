@@ -18,6 +18,11 @@ module Thanos
         end: end_date,
         urls: urls,
         thumbnail: thumbnail,
+        creators: creators,
+        characters: characters,
+        series: series,
+        stories: stories,
+        comics: comics,
       }
     end
   end

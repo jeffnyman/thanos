@@ -54,8 +54,11 @@ Metrics/BlockNesting:
 
 # short methods, man...
 Metrics/MethodLength:
-  Max: 20
+  Enabled: false
 
 # fewer parameters
 Metrics/ParameterLists:
   Max: 3
+
+Metrics/AbcSize:
+  Enabled: false
