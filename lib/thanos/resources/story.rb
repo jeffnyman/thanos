@@ -4,6 +4,12 @@ module Thanos
       :creators, :characters, :events, :series, :comics
 
     def initialize(args)
+      @characters = args[:characters]
+      @creators = args[:creators]
+      @events = args[:events]
+      @series = args[:series]
+      @comics = args[:comics]
+
       args[:attributes].each do |attribute, value|
         instance_variable_set("@#{attribute}", value)
       end

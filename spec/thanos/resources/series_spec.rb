@@ -91,4 +91,14 @@ RSpec.describe Thanos::Series do
     expect(series.creators.first.resource_uri).to eq('http://gateway.marvel.com/v1/public/creators/87')
     expect(series.creators.first.role).to eq('penciller (cover)')
   end
+
+  it '#next - A summary representation of the series which follows this series' do
+    expect(series.next.class).to eq(Thanos::Item::Series)
+    expect(series.next.resource_uri).to eq('http://gateway.marvel.com/v1/public/series/449')
+  end
+
+  it '#previous - A summary representation of the series which preceded this series' do
+    expect(series.previous.class).to eq(Thanos::Item::Series)
+    expect(series.previous.resource_uri).to eq('http://gateway.marvel.com/v1/public/series/449')
+  end
 end

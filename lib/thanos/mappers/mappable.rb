@@ -80,5 +80,21 @@ module Thanos
     def text_objects
       Thanos::Factory::TextObject.new(@results['textObjects']).build
     end
+
+    def next_event
+      Thanos::Factory::Item::Event.new(@results['next']).build.first
+    end
+
+    def previous_event
+      Thanos::Factory::Item::Event.new(@results['previous']).build.first
+    end
+
+    def next_series
+      Thanos::Factory::Item::Series.new(@results['next']).build
+    end
+
+    def previous_series
+      Thanos::Factory::Item::Series.new(@results['previous']).build
+    end
   end
 end

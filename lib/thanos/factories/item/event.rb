@@ -9,8 +9,12 @@ module Thanos
         end
 
         def build
-          @results.collect do |comic|
-            Thanos::Item::Event.new(comic)
+          if @results.is_a?(Array)
+            @results.collect do |comic|
+              Thanos::Item::Event.new(comic)
+            end
+          else
+            [Thanos::Item::Event.new(@results)]
           end
         end
       end

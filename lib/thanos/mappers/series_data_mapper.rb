@@ -25,6 +25,8 @@ module Thanos
         events: events,
         creators: creators,
         characters: characters,
+        next: next_series.first,
+        previous: previous_series.first,
       }
     end
   end

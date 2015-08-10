@@ -88,4 +88,16 @@ RSpec.describe Thanos::Event do
     expect(event.creators.first.role).to eq('writer')
     expect(event.creators.first.resource_uri).to eq('http://gateway.marvel.com/v1/public/creators/259')
   end
+
+  it '#next - A summary representation of the event which follows this event' do
+    expect(event.next.class).to eq(Thanos::Item::Event)
+    expect(event.next.resource_uri).to eq('http://gateway.marvel.com/v1/public/events/252')
+    expect(event.next.type).to eq(nil)
+  end
+
+  it '#previous - A summary representation of the event which preceded this event' do
+    expect(event.previous.class).to eq(Thanos::Item::Event)
+    expect(event.previous.resource_uri).to eq('http://gateway.marvel.com/v1/public/events/246')
+    expect(event.previous.type).to eq(nil)
+  end
 end

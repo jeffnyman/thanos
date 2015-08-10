@@ -23,6 +23,8 @@ module Thanos
         series: series,
         stories: stories,
         comics: comics,
+        next: next_event,
+        previous: previous_event,
       }
     end
   end
